@@ -13,7 +13,13 @@ class TaskDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final task = ref.watch(selectedTaskProvider);
     if (task == null) {
-      return const Center(child: Text('No task selected.'));
+      return  Center(child: Text(
+                    'No tasks available',
+                    style: openSansTextStyle(context,
+                        color: Theme.of(context)
+                            .floatingActionButtonTheme
+                            .backgroundColor),
+                  ));
     }
 
     return Padding(
@@ -81,7 +87,7 @@ class TaskDetailScreen extends ConsumerWidget {
                   Row(
                     children: [
                       Text(
-                        'Status:            ',
+                        'Status:           ',
                         style: openSansTextStyle(context,
                             fontsize: Dimensions.commonFontSize),
                       ),

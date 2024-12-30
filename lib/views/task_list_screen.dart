@@ -255,7 +255,7 @@ class _TaskListView extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        'Status:            ',
+                                        'Status:           ',
                                         style: openSansTextStyle(context,
                                             fontsize:
                                                 Dimensions.commonFontSize),
